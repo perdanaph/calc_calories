@@ -67,7 +67,7 @@ module.exports = (sequelize, DataTypes) => {
       modelName: 'Admin',
       hooks: {
         beforeCreate: (admin, option) => {
-          admin.password = encrypt(user.password);
+          admin.password = encrypt(admin.password);
         },
       },
     }
